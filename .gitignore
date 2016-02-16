@@ -1,3 +1,10 @@
+.classpath
+.project
+.settings
+.idea
+*.iml
+/captures
+
 # Built application files
 *.apk
 *.ap_
