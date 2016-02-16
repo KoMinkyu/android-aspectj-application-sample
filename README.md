@@ -1,0 +1,1 @@
+# android-aspectj-application-sample
