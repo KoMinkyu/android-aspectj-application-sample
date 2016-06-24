@@ -15,14 +15,9 @@ public class LogMethodCallAspect {
     public void methodWithLogMethodCallAnnotation() { }
 
     @Around("methodWithLogMethodCallAnnotation()")
-    public void logOnMethodCall(final ProceedingJoinPoint joinPoint) {
-        Log.i(TAG, "Method call occurred");
+    public void logOnMethodCall(final ProceedingJoinPoint joinPoint) throws Throwable {
+        Log.i(TAG, "Method call occurred.");
 
-        try {
-            joinPoint.proceed();
-        } catch (Throwable throwable) {
-            throwable.printStackTrace();
-            throw new IllegalStateException(throwable);
-        }
+        joinPoint.proceed();
     }
 }
